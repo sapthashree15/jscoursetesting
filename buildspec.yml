@@ -1,0 +1,15 @@
+version: 1
+frontend:
+    phases:
+        install:
+            commands:
+                - 'npm install'  # Ensure dependencies are installed before building
+        build:
+            commands:
+                - 'npm run build'  # Build the project
+    artifacts:
+        baseDirectory: /  # Adjust if your build output is in a subdirectory
+        files:
+            - '**/*'
+    cache:
+        paths: []
